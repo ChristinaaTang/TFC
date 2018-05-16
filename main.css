@@ -1,0 +1,198 @@
+body {
+margin: 0;
+padding: 0;
+height: 100%;
+width: 100%;
+color: #fff;
+font-family: "Helvetica Neue", sans-serif;
+/*background: #efefef;*/
+
+}
+
+
+#header {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: #3b3b3b;
+  position: relative;
+  border-bottom: 3px solid #fff;
+}
+
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  padding: 1rem;
+  background: #3b3b3b;
+}
+
+.footerText {
+
+
+}
+
+
+/*Navigation*/
+.nav ul {
+  list-style: none;
+  /*background-color: transparent !important;*/
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  position: static;
+  width: 100%;
+}
+
+.nav li {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 1em;
+  line-height: 40px;
+  height: 40px;
+  border-bottom: 1px solid #888;
+}
+
+/*Menu text*/
+.nav a {
+  text-decoration: none;
+  /*color: #fff;*/
+  color: #fff;
+  display: block;
+  transition: .3s background-color;
+  /*padding-top: 25px;*/
+}
+
+.nav a:hover {
+  border-bottom: 4px solid #ff4980;
+  transition: .12s;
+}
+
+.nav a.active {
+  color: #ff4980;
+  cursor: default;
+  border-bottom: 4px solid #ff4980;
+
+}
+
+
+@media screen and (min-width: 30px) {
+  .nav li {
+    width: 120px;
+    border-bottom: none;
+    height: 50px;
+    line-height: 50px;
+    font-size: 1em;
+  }
+
+  /* Option 1 - Display Inline */
+  .nav li {
+    display: inline-block;
+    /*margin-right: -4px;*/
+  }
+
+/*Fill image*/
+div.fill-screen {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    top: 50px;
+    bottom: 0;
+    text-align: center;
+    overflow: hidden;
+
+    z-index: -40;
+}
+
+img.make-it-fit {
+  /*position: relative;*/
+
+    max-width: 100%;
+    min-height: 100%;
+    min-width: 60%;
+    z-index: -40;
+
+}
+
+div.center {
+
+  position: relative;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  z-index: 100;
+}
+
+div.left {
+
+  position: relative;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  z-index: 100;
+}
+
+/*Paragraph stuff*/
+div.border {
+  /*position: absolute;*/
+  position: relative;
+  margin: 0;
+  left: 200px;
+  width: 700px;
+  /*display: inline;*/
+  /*padding-left: 200px;*/
+  border-top: 2px solid #fff;
+}
+
+p.text-top-image {
+  /*text-align: center;*/
+  padding-left: 200px;
+  margin: 0;
+  margin-top: 100px;
+  font-size: 4em;
+  z-index: 100;
+  color: #fff;
+  /*position: absolute;*/
+}
+
+p.text-top-image-secondary {
+
+  margin: 0;
+  margin-top: 100px;
+  font-size: 2em;
+  z-index: 100;
+  color: #fff;
+
+}
+
+/*Image Carousel*/
+@keyframes slidy {
+0% { left: 0%; }
+20% { left: 0%; }
+25% { left: -100%; }
+45% { left: -100%; }
+50% { left: -200%; }
+70% { left: -200%; }
+75% { left: -300%; }
+95% { left: -300%; }
+100% { left: -400%; }
+}
+
+body { margin: 0; }
+div#slider { overflow: hidden; }
+div#slider figure img { width: 20%; float: left; }
+div#slider figure {
+  position: absolute;
+  width: 500%;
+  height: 1000px;
+  margin: 0;
+  margin-top: -240px;
+  left: 0;
+  text-align: left;
+  font-size: 0;
+  animation: 30s slidy infinite;
+  z-index: -50;
+}
